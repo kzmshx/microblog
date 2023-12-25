@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "build": "next build",
+    "lint": "eslint . --max-warnings 0",
     "start": "next start",
-    "start:dev": "next dev",
-    "lint": "eslint . --max-warnings 0"
+    "start:dev": "next dev"
   },
   "dependencies": {
     "@repo/ui": "workspace:*",
