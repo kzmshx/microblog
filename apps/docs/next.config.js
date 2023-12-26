@@ -1,4 +1,13 @@
+const withMDX = require("@next/mdx")();
+
 /** @type {import('next').NextConfig} */
-module.exports = {
-  transpilePackages: ["@repo/ui"],
+const nextConfig = {
+  // Configure `pageExtensions` to include MDX files
+  pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
+  // Optionally, add any other Next.js config below
+  experimental: {
+    mdxRs: true,
+  },
 };
+
+module.exports = withMDX(nextConfig);
