@@ -7,19 +7,20 @@ const axiosMock = jest.mocked(axios);
 
 describe("Users", () => {
   describe("all", () => {
-    it("should return users", async () => {
-      axiosMock.get.mockResolvedValue({
-        data: [
-          { name: "Adam", age: 10 },
-          { name: "Bob", age: 13 },
-        ],
-      });
+    beforeEach(() => {
+      axiosMock.get.mockClear();
+    });
+
+    it.each`
+      data                                                     | expected
+      ${[]}                                                    | ${[]}
+      ${[{ name: "Adam", age: 10 }]}                           | ${[{ name: "Adam", age: 10 }]}
+      ${[{ name: "Adam", age: 10 }, { name: "Bob", age: 13 }]} | ${[{ name: "Adam", age: 10 }, { name: "Bob", age: 13 }]}
+    `("should return users", async ({ data, expected }) => {
+      axiosMock.get.mockResolvedValue({ data });
 
       const users = await Users.all();
-      expect(users).toEqual([
-        { name: "Adam", age: 10 },
-        { name: "Bob", age: 13 },
-      ]);
+      expect(users).toEqual(expected);
       expect(axiosMock.get).toHaveBeenCalledTimes(1);
     });
   });
