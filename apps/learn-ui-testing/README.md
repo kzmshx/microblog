@@ -34,7 +34,7 @@ export default defineConfig({
 import "@testing-library/jest-dom/vitest";
 ```
 
-### Install Storybook
+### Setup Storybook
 
 ```shell
 pnpm dlx storybook init --skip-install
@@ -78,6 +78,16 @@ export const Default: Story = {
     await expect(getByDisplayValue("Hello, World!")).toBeInTheDocument();
   },
 };
+```
+
+### Setup Chromatic
+
+```shell
+pnpm i -D chromatic
+```
+
+```shell
+pnpm chromatic --project-token=<project_token> --build-script-name storybook:build
 ```
 
 ## ビジュアルリグレッションテストのツール
