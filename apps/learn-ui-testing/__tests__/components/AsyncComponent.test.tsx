@@ -4,7 +4,6 @@
 
 import { render, waitFor } from "@testing-library/react";
 import AsyncComponent from "../../app/components/AsyncComponent";
-import { expect } from "vitest";
 import { userEvent } from "@testing-library/user-event";
 
 const user = userEvent.setup();
