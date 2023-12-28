@@ -3,3 +3,59 @@
 ## 原文
 
 [Atomic Design | Atomic Design by Brad Frost](https://atomicdesign.bradfrost.com/table-of-contents/)
+
+## 化学要素になぞらえたデザインパターン
+
+- Atoms
+  - Button, Input, Label, Heading, Paragraph, etc.
+- Molecules
+  - Search Form, Navigation Bar, etc.
+- Organisms
+  - Header, Footer, etc.
+- Templates
+  - Home Page Template, About Page Template, etc.
+- Pages
+  - Home Page, About Page, etc.
+
+### Atoms (原子)
+
+- コンポーネントの最小単位
+- ユーザーの目的を達成する「手段」を提供するが「機能」を持たない
+  - ボタンは押すことができるが、ボタンを押すこと自体は機能ではない
+- コンテキストを持たない
+- 例
+  - HTMLの基本要素
+    - Button -> `<button>`
+    - Label -> `<label>`
+    - Text -> `<p>`
+    - TextInput -> `<input type="text">`
+    - etc.
+  - デファクトスタンダードなUIコンポーネント
+    - Icon
+    - Badge
+    - DatePicker, ColorPicker
+    - Panel, Card
+    - etc.
+
+### Molecules (分子)
+
+- Atomsの組み合わせにより構成されるコンポーネント
+- ユーザーの目的を達成するための最小単位
+- コンテキストを持たない
+- ユーザーの目的を達成する「機能」を提供するが、何のための「機能」かは決めない
+  - 検索フォームは検索する機能を提供するが、検索の対象（＝コンテキスト）は決めない
+- 例
+  - SearchForm （検索フォーム）
+    - TextInput
+    - Button
+  - NavBar （ナビゲーションバー）
+    - Logo
+    - Menu
+  - Pagination （ページネーション）
+    - Button
+    - Text
+  - Modal, Dialog （モーダル、ダイアログ）
+    - Button
+    - Text
+    - etc.
+  - etc.
