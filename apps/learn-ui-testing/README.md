@@ -79,3 +79,24 @@ export const Default: Story = {
   },
 };
 ```
+
+## ビジュアルリグレッションテストのツール
+
+よくある実現方法
+
+- reg-suit + Storycap
+  - [Visual regression testingを導入してみた - STORES Product Blog](https://product.st.inc/entry/2023/12/07/202841)
+  - [Visual Regression Test をローカル環境で導入する｜CyberZ Developer](https://note.com/cyberz_cto/n/n79e344f59651)
+- Chromatic
+  - [ビジュアルリグレッションテストのツールを導入するまでの意思決定プロセス - BASEプロダクトチームブログ](https://devblog.thebase.in/entry/process-of-introduction-of-chromatic)
+  - [Vol.03 Component 総数 1000 件を超える Bill One の React フロントエンドに Chromatic を用いた VRT を導入した話 - Sansan Tech Blog](https://buildersbox.corp-sansan.com/entry/2023/05/12/110000)
+  - [Chromatic VRT 戦略：効果を保ちつつ、コストを抑える方法 - Speaker Deck](https://speakerdeck.com/takuyakikuchi/chromatic-vrt-zhan-lue-xiao-guo-wobao-titutu-kosutowoyi-erufang-fa)
+  - [Visual Regression Testを導入して、手間と時間を節約した話 - SmartHR Tech Blog](https://tech.smarthr.jp/entry/2023/09/25/120209)
+- Playwright
+  - [Playwright + reg-suitでVisual Regression Testing(VRT)を導入](https://zenn.dev/koheii/articles/8214467454a46c)
+  - [Playwrightでビジュアルリグレッションテストを導入して安全にCSSライブラリを置き換える | みどりのさるのエンジニア](https://t-yng.jp/post/playwright-vrt)
+  - [2023年にVisual Regression Testingを始めるならどんな選択肢があるか | ログラス Productチーム アドベントカレンダー 2022](https://www.wantedly.com/companies/loglass/post_articles/463738#_=_)
+  - [クラウド型電子カルテにVisual Regression Testを導入した話 - エムスリーテックブログ](https://www.m3tech.blog/entry/digikar-vrt)
+  - [CypressからPlaywrightに移行しました | PR TIMES 開発者ブログ](https://developers.prtimes.jp/2023/04/10/migrate-from-cypress-to-playwright/)
+- その他
+  - [Visual Regression Testingでテスト工数を削減する（ディスプレイ広告タグでの目視確認の自動化） - Yahoo! JAPAN Tech Blog](https://techblog.yahoo.co.jp/entry/2023082130432740/)
