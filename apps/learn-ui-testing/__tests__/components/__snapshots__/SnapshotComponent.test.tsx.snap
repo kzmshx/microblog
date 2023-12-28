@@ -1,0 +1,11 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SnapshotComponent > should pass snapshot test 1`] = `
+<div>
+  <div>
+    <p>
+      Hello, snapshot test!
+    </p>
+  </div>
+</div>
+`;
