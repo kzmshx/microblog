@@ -1,5 +1,5 @@
 import { ChakraProvider, Container } from "@chakra-ui/react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ExpenseSettlementPage from "./components/ExpenseSettlementPage/ExpenseSettlementPage";
 import CreateGroupPage from "./components/CreateGroupPage/CreateGroupPage";
 
