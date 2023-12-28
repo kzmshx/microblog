@@ -19,7 +19,7 @@ pnpm i -D @testing-library/jest-dom --filter learn-ui-testing
 ```
 
 ```ts
-// vitest.config.ts
+// vitest.config.mts
 export default defineConfig({
   plugins: [react()],
   test: {
