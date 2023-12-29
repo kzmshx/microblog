@@ -1,3 +1,7 @@
+---
+title: はじめに
+---
+
 # はじめに
 
 これはMicroblogのドキュメントです。Next.js（Page Router）とNextraで作成されています。
