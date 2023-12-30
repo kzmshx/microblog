@@ -15,7 +15,7 @@ export class ExpenseService {
       throw new Error(`グループ： ${groupName} が存在しません`);
     }
 
-    const expenses = this.expenseRepository.loadExpenses().filter((expense) => expense.groupName === groupName);
+    const expenses = this.expenseRepository.findAll().filter((expense) => expense.groupName === groupName);
     return calculateSettlements(expenses, group.members);
   };
 
@@ -29,6 +29,6 @@ export class ExpenseService {
       throw new Error("支払い者がメンバーの中にいません");
     }
 
-    this.expenseRepository.saveExpense(expense);
+    this.expenseRepository.save(expense);
   };
 }

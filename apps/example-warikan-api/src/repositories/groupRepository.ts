@@ -4,7 +4,7 @@ import { Group } from "../type";
 export class GroupRepository {
   constructor(private filePath: string) {}
 
-  loadGroups(): Group[] {
+  findAll(): Group[] {
     if (!fs.existsSync(this.filePath)) {
       return [];
     }
@@ -13,8 +13,8 @@ export class GroupRepository {
     return JSON.parse(data);
   }
 
-  saveGroup(group: Group): void {
-    const groups = this.loadGroups();
+  save(group: Group): void {
+    const groups = this.findAll();
     groups.push(group);
     fs.writeFileSync(this.filePath, JSON.stringify(groups));
   }

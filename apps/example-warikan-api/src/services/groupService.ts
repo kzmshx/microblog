@@ -5,7 +5,7 @@ export class GroupService {
   constructor(private repository: GroupRepository) {}
 
   getGroups = (): Group[] => {
-    return this.repository.loadGroups();
+    return this.repository.findAll();
   };
 
   getGroupByName = (name: string): Group | undefined => {
@@ -14,6 +14,6 @@ export class GroupService {
   };
 
   addGroup = (group: Group): void => {
-    this.repository.saveGroup(group);
+    this.repository.save(group);
   };
 }
