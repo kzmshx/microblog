@@ -9,8 +9,7 @@ export class GroupService {
   };
 
   getGroupByName = (name: string): Group | undefined => {
-    const groups = this.getGroups();
-    return groups.find((group) => group.name === name);
+    return this.getGroups().find((group) => group.name === name);
   };
 
   addGroup = (group: Group): void => {
