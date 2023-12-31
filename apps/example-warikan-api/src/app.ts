@@ -10,13 +10,14 @@ import { ExpenseController } from "./controllers/expenseController";
 import { expenseRoutes } from "./routes/expenseRoute";
 import { testRoutes } from "./routes/testRoute";
 import { TestController } from "./controllers/testController";
+import { config } from "@repo/example-warikan-config";
 
 export function createApp(groupDataPath: string, expenseDataPath: string): express.Express {
   const app: express.Express = express();
   app.use(express.json());
 
   const options: cors.CorsOptions = {
-    origin: ["http://localhost:3001"],
+    origin: [`http://localhost:${config.apiPort}`],
   };
   app.use(cors(options));
 

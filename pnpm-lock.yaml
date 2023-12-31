@@ -504,8 +504,6 @@ importers:
         specifier: ^5.3.3
         version: 5.3.3
 
-  packages/example-warikan-data: {}
-
   packages/typescript-config: {}
 
   packages/ui:

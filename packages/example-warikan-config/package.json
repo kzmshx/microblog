@@ -3,11 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "exports": {
-    "./config.js": "./config.js",
-    "./config.d.ts": "./config.d.ts",
-    "./config.ts": "./config.ts"
-  },
+  "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "build": "tsc -d"
   },
