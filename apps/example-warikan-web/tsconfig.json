@@ -17,7 +17,7 @@
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
     "esModuleInterop": true,
-    "types": ["@testing-library/jest-dom"]
+    "types": ["@testing-library/jest-dom", "vitest/globals"]
   },
   "include": ["src", "./jest-setup.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
