@@ -1,0 +1,16 @@
+{
+  "name": "example-warikan-e2e",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "playwright": "playwright test",
+    "playwright:ui": "playwright test --ui",
+    "playwright:report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.1",
+    "@repo/example-warikan-config": "workspace:^",
+    "@types/node": "^20.10.6",
+    "axios": "^1.6.3"
+  }
+}
