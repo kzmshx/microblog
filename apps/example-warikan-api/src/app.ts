@@ -17,7 +17,7 @@ export function createApp(groupDataPath: string, expenseDataPath: string): expre
   app.use(express.json());
 
   const options: cors.CorsOptions = {
-    origin: [`http://localhost:${config.apiPort}`],
+    origin: [`http://localhost:${config.webPort}`],
   };
   app.use(cors(options));
 

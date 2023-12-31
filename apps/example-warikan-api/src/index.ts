@@ -1,4 +1,5 @@
 import { createApp } from "./app";
+import { config } from "@repo/example-warikan-config";
 
 let app;
 
@@ -9,6 +10,6 @@ if (process.env.DATA_PATH) {
   throw new Error();
 }
 
-app.listen(3000, () => {
-  console.log("Start on port 3000");
+app.listen(config.apiPort, () => {
+  console.log(`Start on port ${config.apiPort}`);
 });
