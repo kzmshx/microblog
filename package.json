@@ -4,7 +4,13 @@
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
-    "dev:example-warikan": "turbo dev --scope=example-warikan-*",
+    "example-warikan:build": "turbo build --scope=example-warikan-*",
+    "example-warikan:dev": "turbo dev --scope=example-warikan-*",
+    "example-warikan:lint": "turbo lint --scope=example-warikan-*",
+    "example-warikan:start": "turbo start --scope=example-warikan-*",
+    "example-warikan:start:e2e": "turbo start:e2e --scope=example-warikan-*",
+    "example-warikan:test": "turbo test --scope=example-warikan-*",
+    "example-warikan:test:watch": "turbo test:watch --scope=example-warikan-*",
     "format": "prettier --write \"**/*.{js,json,jsx,ts,tsx,md,mdx}\"",
     "lint": "turbo lint"
   },

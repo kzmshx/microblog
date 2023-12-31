@@ -4,10 +4,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "NODE_ENV=DEV DATA_PATH=../data/dev nodemon --exec node --loader ts-node/esm src/index.ts",
-    "start": "NODE_ENV=DEV DATA_PATH=../data/dev nodemon --exec node --loader ts-node/esm src/index.ts",
-    "start:e2e": "NODE_ENV=TEST DATA_PATH=../data/e2e nodemon --exec node --loader ts-node/esm src/index.ts",
-    "test": "vitest"
+    "dev": "NODE_ENV=DEV DATA_PATH=./data/dev nodemon --exec node --loader ts-node/esm src/index.ts",
+    "start": "NODE_ENV=DEV DATA_PATH=./data/prd nodemon --exec node --loader ts-node/esm src/index.ts",
+    "start:e2e": "NODE_ENV=TEST DATA_PATH=./data/e2e nodemon --exec node --loader ts-node/esm src/index.ts",
+    "test": "vitest run",
+    "test:watch": "vitest watch"
   },
   "dependencies": {
     "cors": "2.8.5",

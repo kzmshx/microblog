@@ -12,6 +12,18 @@
     "dev": {
       "cache": false,
       "persistent": true
+    },
+    "start": {
+      "dependsOn": ["^start"]
+    },
+    "start:e2e": {
+      "dependsOn": ["^start:e2e"]
+    },
+    "test": {
+      "dependsOn": ["^test"]
+    },
+    "test:watch": {
+      "dependsOn": ["^test:watch"]
     }
   }
 }

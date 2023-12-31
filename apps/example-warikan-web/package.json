@@ -9,8 +9,10 @@
     "dev": "vite",
     "lint": "eslint  --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
+    "start:e2e": "vite",
     "storybook": "storybook dev -p 6006",
-    "test": "vitest"
+    "test": "vitest run",
+    "test:watch": "vitest watch"
   },
   "dependencies": {
     "@chakra-ui/react": "2.8.1",
