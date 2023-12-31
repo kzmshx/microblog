@@ -4,6 +4,7 @@
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
+    "dev:example-warikan": "turbo dev --scope=example-warikan-*",
     "format": "prettier --write \"**/*.{js,json,jsx,ts,tsx,md,mdx}\"",
     "lint": "turbo lint"
   },
