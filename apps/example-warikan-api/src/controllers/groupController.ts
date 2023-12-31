@@ -40,7 +40,7 @@ export class GroupController {
       }
 
       this.groupService.addGroup({ name, members });
-      res.status(200);
+      res.status(200).send();
     } catch (e) {
       if (e instanceof ZodError) {
         const errorMessages = e.issues.map((e) => e.message);

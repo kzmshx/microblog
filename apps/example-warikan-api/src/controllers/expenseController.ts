@@ -27,7 +27,7 @@ export class ExpenseController {
         payer,
         amount: amount,
       });
-      res.status(200);
+      res.status(200).send();
     } catch (e) {
       if (e instanceof ZodError) {
         const errorMessages = e.issues.map((e) => e.message);
