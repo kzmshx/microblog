@@ -29,6 +29,11 @@ describe("Integration", () => {
     app = createApp(GROUPS_PATH, EXPENSES_PATH);
   });
 
+  afterEach(() => {
+    fs.writeFileSync(GROUPS_PATH, JSON.stringify([]));
+    fs.writeFileSync(EXPENSES_PATH, JSON.stringify([]));
+  });
+
   describe("Groups", () => {
     describe("GET /groups", () => {
       test("200 OK", async () => {
