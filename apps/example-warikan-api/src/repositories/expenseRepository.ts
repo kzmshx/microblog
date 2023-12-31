@@ -2,7 +2,8 @@ import fs from "fs";
 import { Expense } from "../type";
 
 export class ExpenseRepository {
-  constructor(private filePath: string) {}
+  constructor(private readonly filePath: string) {}
+
   findAll(): Expense[] {
     if (!fs.existsSync(this.filePath)) {
       return [];

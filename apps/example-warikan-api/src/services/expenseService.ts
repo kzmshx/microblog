@@ -5,8 +5,8 @@ import { ExpenseRepository } from "../repositories/expenseRepository";
 
 export class ExpenseService {
   constructor(
-    private expenseRepository: ExpenseRepository,
-    private groupService: GroupService,
+    private readonly expenseRepository: ExpenseRepository,
+    private readonly groupService: GroupService,
   ) {}
 
   getSettlements = (groupName: string): Settlement[] => {
@@ -24,7 +24,6 @@ export class ExpenseService {
     if (!group) {
       throw new Error(`グループ： ${expense.groupName} が存在しません`);
     }
-
     if (!group.members.includes(expense.payer)) {
       throw new Error("支払い者がメンバーの中にいません");
     }

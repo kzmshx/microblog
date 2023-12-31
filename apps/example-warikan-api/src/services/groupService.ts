@@ -2,7 +2,7 @@ import { GroupRepository } from "../repositories/groupRepository";
 import { Group } from "../type";
 
 export class GroupService {
-  constructor(private repository: GroupRepository) {}
+  constructor(private readonly repository: GroupRepository) {}
 
   getGroups = (): Group[] => {
     return this.repository.findAll();

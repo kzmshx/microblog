@@ -2,7 +2,7 @@ import fs from "fs";
 import { Group } from "../type";
 
 export class GroupRepository {
-  constructor(private filePath: string) {}
+  constructor(private readonly filePath: string) {}
 
   findAll(): Group[] {
     if (!fs.existsSync(this.filePath)) {
