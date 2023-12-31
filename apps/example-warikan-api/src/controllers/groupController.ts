@@ -20,7 +20,7 @@ export class GroupController {
     try {
       const group = this.groupService.getGroupByName(req.params.name);
       if (!group) {
-        return res.status(404).send("グループが存在しません");
+        return res.status(404).send("group not found");
       }
       res.status(200).json(group);
     } catch (e) {
@@ -36,11 +36,11 @@ export class GroupController {
 
       const groups = this.groupService.getGroups();
       if (groups.map((g) => g.name).includes(name)) {
-        return res.status(400).send("同じ名前のグループが登録されています");
+        return res.status(400).send("group name is already used");
       }
 
       this.groupService.addGroup({ name, members });
-      res.status(200).send("グループの作成が成功しました");
+      res.status(200);
     } catch (e) {
       if (e instanceof ZodError) {
         const errorMessages = e.issues.map((e) => e.message);

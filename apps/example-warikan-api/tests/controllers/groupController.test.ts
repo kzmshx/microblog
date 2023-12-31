@@ -62,7 +62,7 @@ describe("GroupController", () => {
       groupController.getGroupByName(req as express.Request, res as express.Response, next as express.NextFunction);
       // Assert
       expect(res.status).toHaveBeenCalledWith(404);
-      expect(res.send).toHaveBeenCalledWith("グループが存在しません");
+      expect(res.send).toHaveBeenCalledWith("group not found");
     });
   });
 
@@ -76,7 +76,8 @@ describe("GroupController", () => {
       groupController.addGroup(req as express.Request, res as express.Response, next as express.NextFunction);
       // Assert
       expect(res.status).toHaveBeenCalledWith(200);
-      expect(res.send).toHaveBeenCalledWith("グループの作成が成功しました");
+      // Additional assertion
+      expect(groupService.addGroup).toHaveBeenCalledWith(group);
     });
 
     it("should return 400 when group name is duplicated", () => {
@@ -88,15 +89,15 @@ describe("GroupController", () => {
       groupController.addGroup(req as express.Request, res as express.Response, next as express.NextFunction);
       // Assert
       expect(res.status).toHaveBeenCalledWith(400);
-      expect(res.send).toHaveBeenCalledWith("同じ名前のグループが登録されています");
+      expect(res.send).toHaveBeenCalledWith("group name is already used");
     });
 
     test.each`
       description             | group                                              | expectedMessages
-      ${"empty name"}         | ${{ name: "", members: ["user1", "user2"] }}       | ${["グループ名は必須です"]}
-      ${"members.length = 0"} | ${{ name: "group1", members: [] }}                 | ${["メンバーは2人以上必要です"]}
-      ${"members.length = 1"} | ${{ name: "group1", members: ["user1"] }}          | ${["メンバーは2人以上必要です"]}
-      ${"duplicated members"} | ${{ name: "group1", members: ["user1", "user1"] }} | ${["メンバー名が重複しています"]}
+      ${"empty name"}         | ${{ name: "", members: ["user1", "user2"] }}       | ${["group name is required"]}
+      ${"members.length = 0"} | ${{ name: "group1", members: [] }}                 | ${["group must have at least 2 members"]}
+      ${"members.length = 1"} | ${{ name: "group1", members: ["user1"] }}          | ${["group must have at least 2 members"]}
+      ${"duplicated members"} | ${{ name: "group1", members: ["user1", "user1"] }} | ${["member names must be unique"]}
     `(`should return 400 when validation failed: $description`, ({ group, expectedMessages }) => {
       // Arrange
       (groupService.getGroups as Mock).mockReturnValueOnce([]);
