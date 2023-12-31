@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
-import SettlementList from "./SettlementList.tsx";
-import { Settlement } from "../../type.ts";
+import SettlementList from "../../../src/components/SettlementList/SettlementList.tsx";
+import { Settlement } from "../../../src/type.ts";
 
 const meta: Meta<typeof SettlementList> = {
   title: "SettlementList",

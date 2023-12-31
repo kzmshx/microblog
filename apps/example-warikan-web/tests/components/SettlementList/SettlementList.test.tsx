@@ -1,5 +1,5 @@
-import { Settlement } from "../../src/type";
-import SettlementList from "../../src/components/SettlementList/SettlementList";
+import { Settlement } from "../../../src/type";
+import SettlementList from "../../../src/components/SettlementList/SettlementList";
 import { render } from "@testing-library/react";
 import { expect } from "vitest";
 

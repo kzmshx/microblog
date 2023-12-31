@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import CreateGroupForm from "./CreateGroupForm.tsx";
+import CreateGroupForm from "../../../src/components/CreateGroupForm/CreateGroupForm.tsx";
 
 const meta: Meta<typeof CreateGroupForm> = {
   title: "CreateGroupForm",
