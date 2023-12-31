@@ -33,9 +33,9 @@ importers:
         specifier: 3.22.4
         version: 3.22.4
     devDependencies:
-      '@repo/example-warikan-data':
+      '@repo/example-warikan-config':
         specifier: workspace:*
-        version: link:../../packages/example-warikan-data
+        version: link:../../packages/example-warikan-config
       '@types/cors':
         specifier: 2.8.17
         version: 2.8.17
@@ -106,9 +106,9 @@ importers:
       '@chakra-ui/storybook-addon':
         specifier: 5.0.1
         version: 5.0.1(@chakra-ui/react@2.8.1)(@storybook/components@7.6.6)(@storybook/manager-api@7.6.6)(@storybook/preview-api@7.6.6)(@storybook/types@7.6.6)(react-dom@18.2.0)(react@18.2.0)
-      '@repo/example-warikan-data':
+      '@repo/example-warikan-config':
         specifier: workspace:*
-        version: link:../../packages/example-warikan-data
+        version: link:../../packages/example-warikan-config
       '@storybook/addon-essentials':
         specifier: 7.4.0
         version: 7.4.0(@types/react-dom@18.2.18)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
@@ -497,6 +497,8 @@ importers:
       typescript:
         specifier: ^5.2.2
         version: 5.2.2
+
+  packages/example-warikan-config: {}
 
   packages/example-warikan-data: {}
 
