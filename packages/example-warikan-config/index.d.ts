@@ -1,4 +1,4 @@
 export declare const config: {
-    apiPort: number;
-    webPort: number;
+  apiPort: number;
+  webPort: number;
 };
