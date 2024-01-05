@@ -28,6 +28,10 @@ const config: StorybookConfig = {
       },
     },
   },
+  staticDirs: [
+    // Support static assets in the public folder
+    "../public",
+  ],
   docs: {
     autodocs: "tag",
   },
