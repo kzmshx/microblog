@@ -10,6 +10,7 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    // Center components in the preview
     layout: "centered",
   },
 };
