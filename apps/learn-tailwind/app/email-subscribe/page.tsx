@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import EmailSubscribeCard from "@/app/email-subscribe/EmailSubscribeCard";
+import EmailSubscribeCard from "@/app/email-subscribe/components/EmailSubscribeCard";
 
 export const metadata: Metadata = {
   title: "Learn Tailwind - Email Subscribe Card",
