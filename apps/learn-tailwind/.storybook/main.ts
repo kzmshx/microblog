@@ -1,6 +1,9 @@
 import type { StorybookConfig } from "@storybook/nextjs";
 
-import { join, dirname } from "path";
+import * as path from "path";
+import { dirname, join } from "path";
+import { webpack } from "next/dist/compiled/webpack/webpack";
+import Configuration = webpack.Configuration;
 
 /**
  * This function is used to resolve the absolute path of a package.
@@ -19,10 +22,21 @@ const config: StorybookConfig = {
   ],
   framework: {
     name: getAbsolutePath("@storybook/nextjs"),
-    options: {},
+    options: {
+      builder: {
+        useSWC: true,
+      },
+    },
   },
   docs: {
     autodocs: "tag",
+  },
+  webpackFinal: async (config: Configuration) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      "@": path.resolve(__dirname, ".."),
+    };
+    return config;
   },
 };
 export default config;
