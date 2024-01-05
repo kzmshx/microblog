@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import PricingCardList from "@/app/pricing-cards/PricingCardList";
+import PricingCardList from "@/app/pricing-cards/components/PricingCardList";
 import { plans } from "@/app/pricing-cards/plans";
 
 export const metadata: Metadata = {
