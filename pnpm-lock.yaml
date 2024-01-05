@@ -17,6 +17,9 @@ importers:
       prettier:
         specifier: ^3.1.0
         version: 3.1.0
+      prettier-plugin-tailwindcss:
+        specifier: ^0.5.10
+        version: 0.5.10(prettier@3.1.0)
       turbo:
         specifier: latest
         version: 1.11.2
@@ -120,7 +123,7 @@ importers:
     devDependencies:
       '@chakra-ui/storybook-addon':
         specifier: 5.0.1
-        version: 5.0.1(@chakra-ui/react@2.8.1)(@storybook/components@7.6.6)(@storybook/manager-api@7.6.6)(@storybook/preview-api@7.6.6)(@storybook/types@7.6.6)(react-dom@18.2.0)(react@18.2.0)
+        version: 5.0.1(@chakra-ui/react@2.8.1)(@storybook/components@7.6.7)(@storybook/manager-api@7.6.7)(@storybook/preview-api@7.6.7)(@storybook/types@7.6.7)(react-dom@18.2.0)(react@18.2.0)
       '@repo/example-warikan-config':
         specifier: workspace:*
         version: link:../../packages/example-warikan-config
@@ -4279,7 +4282,7 @@ packages:
       '@chakra-ui/system': 2.6.1(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(react@18.2.0)
       react: 18.2.0
 
-  /@chakra-ui/storybook-addon@5.0.1(@chakra-ui/react@2.8.1)(@storybook/components@7.6.6)(@storybook/manager-api@7.6.6)(@storybook/preview-api@7.6.6)(@storybook/types@7.6.6)(react-dom@18.2.0)(react@18.2.0):
+  /@chakra-ui/storybook-addon@5.0.1(@chakra-ui/react@2.8.1)(@storybook/components@7.6.7)(@storybook/manager-api@7.6.7)(@storybook/preview-api@7.6.7)(@storybook/types@7.6.7)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-QZ9Ye46a3EuFks9oyI3r/ohqzvoWhv+ObPR6tHyFCgIQSlwFCap8849Ue/+r6UAEjmgfD+4pdtfqgu9Kv+LqjA==}
     peerDependencies:
       '@chakra-ui/react': '>=2.0.0'
@@ -4296,10 +4299,10 @@ packages:
         optional: true
     dependencies:
       '@chakra-ui/react': 2.8.1(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.45)(framer-motion@10.16.4)(react-dom@18.2.0)(react@18.2.0)
-      '@storybook/components': 7.6.6(@types/react-dom@18.2.18)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
-      '@storybook/manager-api': 7.6.6(react-dom@18.2.0)(react@18.2.0)
-      '@storybook/preview-api': 7.6.6
-      '@storybook/types': 7.6.6
+      '@storybook/components': 7.6.7(@types/react-dom@18.2.18)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/manager-api': 7.6.7(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/preview-api': 7.6.7
+      '@storybook/types': 7.6.7
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: true
@@ -20115,6 +20118,58 @@ packages:
       prettier: 3.1.0
       sort-package-json: 2.6.0
       synckit: 0.8.5
+    dev: true
+
+  /prettier-plugin-tailwindcss@0.5.10(prettier@3.1.0):
+    resolution: {integrity: sha512-9UGSejqFxGG6brYjFfTYlJ8zs4L/lvZg1AngFfaC5Fs1otSskASv5IWKmjPu5MlABQUtTKtMArKyYr/hWpXSUg==}
+    engines: {node: '>=14.21.3'}
+    peerDependencies:
+      '@ianvs/prettier-plugin-sort-imports': '*'
+      '@prettier/plugin-pug': '*'
+      '@shopify/prettier-plugin-liquid': '*'
+      '@trivago/prettier-plugin-sort-imports': '*'
+      prettier: ^3.0
+      prettier-plugin-astro: '*'
+      prettier-plugin-css-order: '*'
+      prettier-plugin-import-sort: '*'
+      prettier-plugin-jsdoc: '*'
+      prettier-plugin-marko: '*'
+      prettier-plugin-organize-attributes: '*'
+      prettier-plugin-organize-imports: '*'
+      prettier-plugin-style-order: '*'
+      prettier-plugin-svelte: '*'
+      prettier-plugin-twig-melody: '*'
+    peerDependenciesMeta:
+      '@ianvs/prettier-plugin-sort-imports':
+        optional: true
+      '@prettier/plugin-pug':
+        optional: true
+      '@shopify/prettier-plugin-liquid':
+        optional: true
+      '@trivago/prettier-plugin-sort-imports':
+        optional: true
+      prettier-plugin-astro:
+        optional: true
+      prettier-plugin-css-order:
+        optional: true
+      prettier-plugin-import-sort:
+        optional: true
+      prettier-plugin-jsdoc:
+        optional: true
+      prettier-plugin-marko:
+        optional: true
+      prettier-plugin-organize-attributes:
+        optional: true
+      prettier-plugin-organize-imports:
+        optional: true
+      prettier-plugin-style-order:
+        optional: true
+      prettier-plugin-svelte:
+        optional: true
+      prettier-plugin-twig-melody:
+        optional: true
+    dependencies:
+      prettier: 3.1.0
     dev: true
 
   /prettier@2.8.8:
