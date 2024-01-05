@@ -32,6 +32,7 @@ const config: StorybookConfig = {
     autodocs: "tag",
   },
   webpackFinal: async (config: Configuration) => {
+    // Support typescript import aliases. See tsconfig.json:compilerOptions.paths
     config.resolve.alias = {
       ...config.resolve.alias,
       "@": path.resolve(__dirname, ".."),
