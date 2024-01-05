@@ -10,6 +10,18 @@ export default meta;
 
 type Story = StoryObj<typeof EmailSubscribeCard>;
 
-export const Default: Story = {
-  args: {},
+export const Large: Story = {
+  parameters: {
+    viewport: {
+      defaultViewport: "Responsive",
+    },
+  },
+};
+
+export const Small: Story = {
+  parameters: {
+    viewport: {
+      defaultViewport: "mobile2",
+    },
+  },
 };
