@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 import EmailSubscribeCard from "@/app/email-subscribe/components/EmailSubscribeCard";
+import "@/app/globals.css";
 
 const meta: Meta<typeof EmailSubscribeCard> = {
   title: "EmailSubscribeCard",
