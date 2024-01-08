@@ -223,9 +223,15 @@ importers:
 
   apps/learn-tailwind:
     dependencies:
+      '@ionic/react':
+        specifier: ^7.6.3
+        version: 7.6.3(react-dom@18.2.0)(react@18.2.0)
       date-fns:
         specifier: ^3.1.0
         version: 3.1.0
+      ionicons:
+        specifier: ^7.2.2
+        version: 7.2.2
       next:
         specifier: 14.0.4
         version: 14.0.4(@babel/core@7.23.7)(react-dom@18.2.0)(react@18.2.0)
@@ -770,7 +776,7 @@ packages:
       '@babel/traverse': 7.23.6
       '@babel/types': 7.23.6
       convert-source-map: 2.0.0
-      debug: 4.3.4(supports-color@5.5.0)
+      debug: 4.3.4
       gensync: 1.0.0-beta.2
       json5: 2.2.3
       semver: 6.3.1
@@ -792,7 +798,7 @@ packages:
       '@babel/traverse': 7.23.7
       '@babel/types': 7.23.6
       convert-source-map: 2.0.0
-      debug: 4.3.4(supports-color@5.5.0)
+      debug: 4.3.4
       gensync: 1.0.0-beta.2
       json5: 2.2.3
       semver: 6.3.1
@@ -986,7 +992,7 @@ packages:
       '@babel/core': 7.23.7
       '@babel/helper-compilation-targets': 7.23.6
       '@babel/helper-plugin-utils': 7.22.5
-      debug: 4.3.4(supports-color@5.5.0)
+      debug: 4.3.4
       lodash.debounce: 4.0.8
       resolve: 1.22.8
     transitivePeerDependencies:
@@ -3406,7 +3412,7 @@ packages:
       '@babel/helper-split-export-declaration': 7.22.6
       '@babel/parser': 7.23.6
       '@babel/types': 7.23.6
-      debug: 4.3.4(supports-color@5.5.0)
+      debug: 4.3.4
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
@@ -3423,7 +3429,7 @@ packages:
       '@babel/helper-split-export-declaration': 7.22.6
       '@babel/parser': 7.23.6
       '@babel/types': 7.23.6
-      debug: 4.3.4(supports-color@5.5.0)
+      debug: 4.3.4
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
@@ -5069,7 +5075,7 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dependencies:
       ajv: 6.12.6
-      debug: 4.3.4(supports-color@5.5.0)
+      debug: 4.3.4
       espree: 9.6.1
       globals: 13.24.0
       ignore: 5.3.0
@@ -5148,7 +5154,7 @@ packages:
     engines: {node: '>=10.10.0'}
     dependencies:
       '@humanwhocodes/object-schema': 2.0.1
-      debug: 4.3.4(supports-color@5.5.0)
+      debug: 4.3.4
       minimatch: 3.1.2
     transitivePeerDependencies:
       - supports-color
@@ -5162,6 +5168,27 @@ packages:
   /@humanwhocodes/object-schema@2.0.1:
     resolution: {integrity: sha512-dvuCeX5fC9dXgJn9t+X5atfmgQAzUOWqS1254Gh0m6i8wKd10ebXkfNKiRK+1GWi/yTvvLDHpoxLr0xxxeslWw==}
     dev: true
+
+  /@ionic/core@7.6.3:
+    resolution: {integrity: sha512-KT8RXcbLRoCvj2wQNZJ0FAM+PlcVZZT0N3BPYPAiyTLA/rmMnlPGxNMMqGEJMynL8oPx/2nh+bLS2Yv/kBPnug==}
+    dependencies:
+      '@stencil/core': 4.9.0
+      ionicons: 7.2.2
+      tslib: 2.6.2
+    dev: false
+
+  /@ionic/react@7.6.3(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-hgntkT+tJalHH4XAjnNZ3e5G64mZL/C7ah2pF5v6W/0YdwRMv4HTEp7KYyumRFiUlNQdNXmZlwJ2CjsoAafJRA==}
+    peerDependencies:
+      react: '>=16.8.6'
+      react-dom: '>=16.8.6'
+    dependencies:
+      '@ionic/core': 7.6.3
+      ionicons: 7.2.2
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      tslib: 2.6.2
+    dev: false
 
   /@isaacs/cliui@8.0.2:
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
@@ -6728,6 +6755,12 @@ packages:
     dependencies:
       '@sinonjs/commons': 3.0.0
     dev: true
+
+  /@stencil/core@4.9.0:
+    resolution: {integrity: sha512-aWSkhBmk3yPwRAkUwBbzRwmdhb8hKiQ/JMr9m5jthpBZLjtppYbzz6PN2MhSMDfRp6K93eQw5WogSEH4HHuB6w==}
+    engines: {node: '>=16.0.0', npm: '>=7.10.0'}
+    hasBin: true
+    dev: false
 
   /@storybook/addon-actions@7.4.0(@types/react-dom@18.2.18)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-0lHLLUlrGE7CBFrfmAXrBKu7fUIsiQlnNekuE3cIAjSgVR481bJEzYHUUoMATqpPC4GGErBdP1CZxVDDwWV8jA==}
@@ -9003,7 +9036,7 @@ packages:
       typescript: '>= 4.x'
       webpack: '>= 4'
     dependencies:
-      debug: 4.3.4(supports-color@5.5.0)
+      debug: 4.3.4
       endent: 2.1.0
       find-cache-dir: 3.3.2
       flat-cache: 3.0.4
@@ -9301,7 +9334,7 @@ packages:
       '@storybook/instrumenter': 7.6.7
       '@storybook/preview-api': 7.6.7
       '@testing-library/dom': 9.3.3
-      '@testing-library/jest-dom': 6.1.6(vitest@1.0.4)
+      '@testing-library/jest-dom': 6.1.6
       '@testing-library/user-event': 14.3.0(@testing-library/dom@9.3.3)
       '@types/chai': 4.3.11
       '@vitest/expect': 0.34.7
@@ -9593,6 +9626,34 @@ packages:
       lodash: 4.17.21
       redent: 3.0.0
       vitest: 1.0.4(@types/node@20.10.4)(jsdom@23.0.1)
+    dev: true
+
+  /@testing-library/jest-dom@6.1.6:
+    resolution: {integrity: sha512-YwuiOdYEcxhfC2u5iNKlvg2Q5MgbutovP6drq7J1HrCbvR+G58BbtoCoq+L/kNlrNFsu2Kt3jaFAviLVxYHJZg==}
+    engines: {node: '>=14', npm: '>=6', yarn: '>=1'}
+    peerDependencies:
+      '@jest/globals': '>= 28'
+      '@types/jest': '>= 28'
+      jest: '>= 28'
+      vitest: '>= 0.32'
+    peerDependenciesMeta:
+      '@jest/globals':
+        optional: true
+      '@types/jest':
+        optional: true
+      jest:
+        optional: true
+      vitest:
+        optional: true
+    dependencies:
+      '@adobe/css-tools': 4.3.2
+      '@babel/runtime': 7.23.7
+      aria-query: 5.3.0
+      chalk: 3.0.0
+      css.escape: 1.5.1
+      dom-accessibility-api: 0.5.16
+      lodash: 4.17.21
+      redent: 3.0.0
     dev: true
 
   /@testing-library/jest-dom@6.1.6(vitest@1.0.4):
@@ -10466,7 +10527,7 @@ packages:
       '@typescript-eslint/types': 6.16.0
       '@typescript-eslint/typescript-estree': 6.16.0(typescript@5.3.3)
       '@typescript-eslint/visitor-keys': 6.16.0
-      debug: 4.3.4(supports-color@5.5.0)
+      debug: 4.3.4
       eslint: 8.56.0
       typescript: 5.3.3
     transitivePeerDependencies:
@@ -10658,7 +10719,7 @@ packages:
     dependencies:
       '@typescript-eslint/types': 5.62.0
       '@typescript-eslint/visitor-keys': 5.62.0
-      debug: 4.3.4(supports-color@5.5.0)
+      debug: 4.3.4
       globby: 11.1.0
       is-glob: 4.0.3
       semver: 7.5.4
@@ -10743,7 +10804,7 @@ packages:
     dependencies:
       '@typescript-eslint/types': 6.16.0
       '@typescript-eslint/visitor-keys': 6.16.0
-      debug: 4.3.4(supports-color@5.5.0)
+      debug: 4.3.4
       globby: 11.1.0
       is-glob: 4.0.3
       minimatch: 9.0.3
@@ -13397,6 +13458,17 @@ packages:
       ms: 2.1.3
     dev: true
 
+  /debug@4.3.4:
+    resolution: {integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==}
+    engines: {node: '>=6.0'}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
+    dependencies:
+      ms: 2.1.2
+
   /debug@4.3.4(supports-color@5.5.0):
     resolution: {integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==}
     engines: {node: '>=6.0'}
@@ -13645,7 +13717,7 @@ packages:
     hasBin: true
     dependencies:
       address: 1.2.2
-      debug: 4.3.4(supports-color@5.5.0)
+      debug: 4.3.4
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -14023,7 +14095,7 @@ packages:
     peerDependencies:
       esbuild: '>=0.12 <1'
     dependencies:
-      debug: 4.3.4(supports-color@5.5.0)
+      debug: 4.3.4
       esbuild: 0.18.20
     transitivePeerDependencies:
       - supports-color
@@ -14196,7 +14268,7 @@ packages:
       eslint: '*'
       eslint-plugin-import: '*'
     dependencies:
-      debug: 4.3.4(supports-color@5.5.0)
+      debug: 4.3.4
       enhanced-resolve: 5.15.0
       eslint: 8.56.0
       eslint-module-utils: 2.8.0(@typescript-eslint/parser@6.16.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.56.0)
@@ -14713,7 +14785,7 @@ packages:
       ajv: 6.12.6
       chalk: 4.1.2
       cross-spawn: 7.0.3
-      debug: 4.3.4(supports-color@5.5.0)
+      debug: 4.3.4
       doctrine: 3.0.0
       escape-string-regexp: 4.0.0
       eslint-scope: 7.2.2
@@ -16167,7 +16239,7 @@ packages:
     engines: {node: '>= 6.0.0'}
     dependencies:
       agent-base: 5.1.1
-      debug: 4.3.4(supports-color@5.5.0)
+      debug: 4.3.4
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -16390,6 +16462,12 @@ packages:
     resolution: {integrity: sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA==}
     dependencies:
       loose-envify: 1.4.0
+
+  /ionicons@7.2.2:
+    resolution: {integrity: sha512-I3iYIfc9Q9FRifWyFSwTAvbEABWlWY32i0sAVDDPGYnaIZVugkLCZFbEcrphW6ixVPg8tt1oLwalo/JJwbEqnA==}
+    dependencies:
+      '@stencil/core': 4.9.0
+    dev: false
 
   /ip@1.1.8:
     resolution: {integrity: sha512-PuExPYUiu6qMBQb4l06ecm6T6ujzhmh+MeJcW9wa89PoAz5pvd4zPgN5WJV104mb6S2T1AwNIAaB70JNrLQWhg==}
@@ -20327,7 +20405,7 @@ packages:
     engines: {node: '>=8.16.0'}
     dependencies:
       '@types/mime-types': 2.1.4
-      debug: 4.3.4(supports-color@5.5.0)
+      debug: 4.3.4
       extract-zip: 1.7.0
       https-proxy-agent: 4.0.0
       mime: 2.6.0

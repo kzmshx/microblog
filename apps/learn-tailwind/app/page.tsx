@@ -20,6 +20,10 @@ export default function Home() {
       title: "Login Modal",
       href: "/login-modal",
     },
+    {
+      title: "Navigation Menu 1",
+      href: "/navigation-menu-1",
+    },
   ];
 
   return (
