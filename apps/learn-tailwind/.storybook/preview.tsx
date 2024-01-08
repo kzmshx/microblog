@@ -1,5 +1,7 @@
 import type { Preview } from "@storybook/react";
 import { INITIAL_VIEWPORTS, MINIMAL_VIEWPORTS } from "@storybook/addon-viewport";
+import "@/app/globals.css";
+import { mulish, rokkitt } from "@/app/utils/font";
 
 const preview: Preview = {
   parameters: {
@@ -20,6 +22,13 @@ const preview: Preview = {
       },
     },
   },
+  decorators: [
+    (Story) => (
+      <div className={`${mulish.variable} ${rokkitt.variable}`}>
+        <Story />
+      </div>
+    ),
+  ],
 };
 
 export default preview;

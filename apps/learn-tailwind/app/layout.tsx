@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "@/app/globals.css";
+import { mulish, rokkitt } from "@/app/utils/font";
 
 export const metadata: Metadata = {
   title: "Learn Tailwind",
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${mulish.variable} ${rokkitt.variable}`}>{children}</body>
     </html>
   );
 }

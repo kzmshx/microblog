@@ -1,7 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 import PricingCardList from "@/app/pricing-cards/components/PricingCardList";
 import { plans } from "@/app/pricing-cards/plans";
-import "@/app/globals.css";
 
 const meta: Meta<typeof PricingCardList> = {
   title: "PricingCardList",

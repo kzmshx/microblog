@@ -2,18 +2,18 @@ export default function LoginModal() {
   return (
     <div className="relative m-6 flex flex-col space-y-10 rounded-2xl bg-white shadow-2xl md:m-0 md:flex-row md:space-y-0">
       <div className="p-6 md:p-20">
-        <h2 className="mb-5 font-mono text-4xl font-bold">Log In</h2>
-        <p className="mb-12 max-w-sm font-sans font-light text-gray-600">
+        <h2 className="font-Rokkitt mb-5 text-4xl font-bold">Log In</h2>
+        <p className="font-Mulish mb-12 max-w-sm font-light text-gray-600">
           Log in to your account to upload or download pictures, videos or music.
         </p>
         <input
-          className="w-full rounded-md border border-gray-300 p-6 placeholder:font-sans placeholder:font-light"
+          className="placeholder:font-Mulish w-full rounded-md border border-gray-300 p-6 placeholder:font-light"
           type="text"
           placeholder="Enter your email address"
         />
         <div className="mt-6 flex flex-col items-center justify-between space-y-6 md:flex-row md:space-y-0">
-          <div className="font-thin text-cyan-700">Forgot password</div>
-          <button className="flex w-full items-center justify-center space-x-4 rounded-md border bg-cyan-700 p-6 px-9 font-sans font-bold text-white shadow-sm shadow-cyan-100 transition duration-150 hover:-translate-y-0.5 hover:bg-opacity-90 hover:shadow-lg md:w-auto">
+          <div className="font-Mulish font-thin text-cyan-700">Forgot password</div>
+          <button className="font-Mulish flex w-full items-center justify-center space-x-4 rounded-md border bg-cyan-700 p-6 px-9 font-bold text-white shadow-sm shadow-cyan-100 transition duration-150 hover:-translate-y-0.5 hover:bg-opacity-90 hover:shadow-lg md:w-auto">
             <span>Next</span>
             <svg
               className="w-7"
@@ -33,15 +33,15 @@ export default function LoginModal() {
           </button>
         </div>
         <div className="mt-12 border-b border-b-gray-300"></div>
-        <p className="py-6 text-center text-sm font-thin text-gray-400">or log in with</p>
+        <p className="font-Mulish py-6 text-center text-sm font-thin text-gray-400">or log in with</p>
         <div className="flex flex-col space-x-0 space-y-6 md:flex-row md:space-x-4 md:space-y-0">
           <button className="flex items-center justify-center space-x-3 rounded border border-b-gray-300 py-2 shadow-sm transition duration-150 hover:-translate-y-0.5 hover:bg-opacity-30 hover:shadow-lg md:w-1/2">
             <img className="w-9" src="/login-modal/images/facebook.png" alt="Log in with Facebook" />
-            <span className="font-thin">Facebook</span>
+            <span className="font-Mulish font-thin">Facebook</span>
           </button>
           <button className="flex items-center justify-center space-x-3 rounded border border-b-gray-300 py-2 shadow-sm transition duration-150 hover:-translate-y-0.5 hover:bg-opacity-30 hover:shadow-lg md:w-1/2">
             <img className="w-9" src="/login-modal/images/google.png" alt="Log in with Google" />
-            <span className="font-thin">Google</span>
+            <span className="font-Mulish font-thin">Google</span>
           </button>
         </div>
       </div>

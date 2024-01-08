@@ -1,7 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 import ImageGallery from "@/app/image-gallery/components/ImageGallery";
 import { artworks } from "@/app/image-gallery/data";
-import "@/app/globals.css";
 
 const meta: Meta<typeof ImageGallery> = {
   title: "ImageGallery",

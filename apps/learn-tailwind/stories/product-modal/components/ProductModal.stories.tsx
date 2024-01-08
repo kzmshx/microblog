@@ -1,7 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 import ProductModal from "@/app/product-modal/components/ProductModal";
 import { product } from "@/app/product-modal/data";
-import "@/app/globals.css";
 
 const meta: Meta<typeof ProductModal> = {
   title: "ProductModal",
