@@ -1,3 +1,5 @@
+import classes from "@/components/Post.module.css";
+
 export type PostProps = {
   author: string;
   body: string;
@@ -5,9 +7,9 @@ export type PostProps = {
 
 export default function Post({ author, body }: PostProps) {
   return (
-    <div>
-      <p>{author}</p>
-      <p>{body}</p>
+    <div className={classes.post}>
+      <p className={classes.author}>{author}</p>
+      <p className={classes.text}>{body}</p>
     </div>
   );
 }
