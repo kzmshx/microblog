@@ -11,7 +11,7 @@
     "example-warikan:start:e2e": "turbo start:e2e --scope=example-warikan-*",
     "example-warikan:test": "turbo test --scope=example-warikan-*",
     "example-warikan:test:watch": "turbo test:watch --scope=example-warikan-*",
-    "format": "prettier --write \"**/*.{js,json,jsx,ts,tsx,md,mdx}\"",
+    "format": "prettier --write \"**/*.{css,js,json,jsx,ts,tsx,md,mdx}\"",
     "lint": "turbo lint"
   },
   "prettier": {
